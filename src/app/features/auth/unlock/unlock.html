@@ -1,0 +1,13 @@
+<form [formGroup]="unlockForm" (ngSubmit)="onSubmit()">
+
+  <input type="email" formControlName="email" placeholder="Email" />
+
+  <input type="password" formControlName="tempPwd" placeholder="Temporary Password" />
+
+  <input type="password" formControlName="newPwd" placeholder="New Password" />
+
+  <input type="password" formControlName="confirmPwd" placeholder="Confirm Password" />
+
+  <button type="submit">Unlock Account</button>
+
+</form>

@@ -1,0 +1,108 @@
+/* Full page center */
+.container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+  padding: 20px;
+}
+
+/* Card */
+.card {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 550px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+/* Title */
+.card h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Form layout */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* First & Last name row */
+.row {
+  display: flex;
+  gap: 10px;
+}
+
+/* Inputs & Select */
+input,
+select {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+/* Focus effect */
+input:focus,
+select:focus {
+  border-color: #4facfe;
+  outline: none;
+  box-shadow: 0 0 5px rgba(79, 172, 254, 0.4);
+}
+
+/* Button */
+button {
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  background: #4facfe;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #00c6ff;
+}
+
+button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+/* ============================= */
+/* 📱 Responsive Design Section  */
+/* ============================= */
+
+/* Tablet */
+@media (max-width: 768px) {
+  .card {
+    padding: 25px;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .card {
+    padding: 20px;
+  }
+
+  input,
+  select,
+  button {
+    font-size: 14px;
+    padding: 9px;
+  }
+}

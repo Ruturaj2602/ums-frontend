@@ -1,0 +1,53 @@
+<div class="container">
+  <div class="card">
+    <h2>Create Account</h2>
+
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+
+      <div class="row">
+        <input type="text" placeholder="First Name" formControlName="fname">
+        <input type="text" placeholder="Last Name" formControlName="lname">
+      </div>
+
+      <input type="email" placeholder="Email" formControlName="email">
+      
+      <input type="text" placeholder="Phone Number" formControlName="phno">
+      <input type="date" formControlName="dob">
+
+      <select formControlName="gender">
+        <option value="">Select Gender</option>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+      </select>
+
+      <!-- COUNTRY -->
+      <select formControlName="countryId" (change)="onCountryChange()">
+        <option value="">Select Country</option>
+        <option *ngFor="let c of countries" [value]="c.id">
+          {{ c.name }}
+        </option>
+      </select>
+
+      <!-- STATE -->
+      <select formControlName="stateId" (change)="onStateChange()">
+        <option value="">Select State</option>
+        <option *ngFor="let s of states" [value]="s.id">
+          {{ s.name }}
+        </option>
+      </select>
+
+      <!-- CITY -->
+      <select formControlName="cityId">
+        <option value="">Select City</option>
+        <option *ngFor="let c of cities" [value]="c.id">
+          {{ c.name }}
+        </option>
+      </select>
+
+      <button type="submit" [disabled]="registerForm.invalid">
+        Register
+      </button>
+
+    </form>
+  </div>
+</div>
